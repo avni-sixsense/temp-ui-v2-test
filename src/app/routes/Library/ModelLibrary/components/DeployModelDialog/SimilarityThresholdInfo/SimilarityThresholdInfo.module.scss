@@ -1,0 +1,15 @@
+@import 'src/styles/css/const';
+
+.info {
+  display: grid;
+  grid-auto-flow: column;
+  gap: $xxSmall;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: $xxSmall;
+  font-weight: $fontWeightNormal;
+
+  .infoIcon {
+    margin-top: 4px;
+  }
+}

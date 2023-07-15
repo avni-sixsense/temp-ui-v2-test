@@ -1,0 +1,13 @@
+.draggable {
+  user-select: none;
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  width: 50%;
+  max-width: 300px;
+  z-index: 1300;
+
+  &[data-dragging='true'] {
+    cursor: move;
+  }
+}

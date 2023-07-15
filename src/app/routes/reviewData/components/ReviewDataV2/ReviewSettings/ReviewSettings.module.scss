@@ -1,0 +1,11 @@
+@import 'styles/css/main';
+
+.reviewSettings {
+  @include flexBetween;
+
+  & > div {
+    display: grid;
+    @include gridFlowColumn;
+    gap: $xxSmall;
+  }
+}

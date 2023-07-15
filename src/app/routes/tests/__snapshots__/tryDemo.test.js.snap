@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for <TryDemo> Page should have the same mockup 1`] = `
+<div
+  className="MuiPaper-root makeStyles-paper-1 MuiPaper-elevation3 MuiPaper-rounded"
+>
+  <h1
+    className="MuiTypography-root makeStyles-title-2 MuiTypography-h1"
+  >
+    Try Demo
+  </h1>
+  <h1
+    className="MuiTypography-root makeStyles-subTitle-3 MuiTypography-h1"
+  >
+    Before proceeding to the demo, please download the following
+  </h1>
+  <div
+    className="makeStyles-stepper-7"
+  >
+    <div
+      className="MuiPaper-root MuiStepper-root MuiStepper-vertical MuiPaper-elevation0"
+    >
+      <div
+        className="MuiStep-root MuiStep-vertical"
+      >
+        <span
+          className="MuiStepLabel-root MuiStepLabel-vertical"
+        >
+          <span
+            className="MuiStepLabel-iconContainer"
+          >
+            <div
+              className="makeStyles-root-86 makeStyles-active-88"
+            >
+              <div />
+            </div>
+          </span>
+          <span
+            className="MuiStepLabel-labelContainer"
+          >
+            <span
+              className="MuiTypography-root MuiStepLabel-label MuiStepLabel-active MuiTypography-body2 MuiTypography-displayBlock"
+            >
+              <p
+                className="MuiTypography-root makeStyles-heading-6 MuiTypography-body1"
+              >
+                Sample Data
+              </p>
+            </span>
+          </span>
+        </span>
+        <div
+          className="MuiStepContent-root"
+          disabled={false}
+          icon={1}
+        >
+          <div
+            className="MuiCollapse-container MuiStepContent-transition MuiCollapse-entered"
+            style={
+              Object {
+                "minHeight": "0px",
+              }
+            }
+          >
+            <div
+              className="MuiCollapse-wrapper"
+            >
+              <div
+                className="MuiCollapse-wrapperInner"
+              >
+                <p
+                  className="MuiTypography-root makeStyles-data-5 MuiTypography-body1"
+                >
+                  Lorem ipsum dolor sit amet, con sectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <div
+                  className="makeStyles-actionsContainer-4"
+                >
+                  <div>
+                    <button
+                      className="MuiButtonBase-root MuiButton-root MuiButton-outlined"
+                      disabled={false}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onDragLeave={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchMove={[Function]}
+                      onTouchStart={[Function]}
+                      tabIndex={0}
+                      type="button"
+                    >
+                      <span
+                        className="MuiButton-label"
+                      >
+                        Download Sample Data
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiStepConnector-root MuiStepConnector-vertical Mui-disabled"
+      >
+        <span
+          className="MuiStepConnector-line MuiStepConnector-lineVertical"
+        />
+      </div>
+      <div
+        className="MuiStep-root MuiStep-vertical"
+      >
+        <span
+          className="MuiStepLabel-root MuiStepLabel-vertical Mui-disabled"
+        >
+          <span
+            className="MuiStepLabel-iconContainer"
+          >
+            <div
+              className="makeStyles-root-86 makeStyles-inactive-87"
+            >
+              <div />
+            </div>
+          </span>
+          <span
+            className="MuiStepLabel-labelContainer"
+          >
+            <span
+              className="MuiTypography-root MuiStepLabel-label MuiTypography-body2 MuiTypography-displayBlock"
+            >
+              <p
+                className="MuiTypography-root makeStyles-heading-6 MuiTypography-body1"
+              >
+                Instruction
+              </p>
+            </span>
+          </span>
+        </span>
+        <div
+          className="MuiStepContent-root MuiStepContent-last"
+          disabled={true}
+          icon={2}
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-center"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-item"
+    >
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text Mui-disabled Mui-disabled"
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={-1}
+        type="button"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          Try Demo
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

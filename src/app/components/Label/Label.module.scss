@@ -1,0 +1,65 @@
+@import 'src/styles/css/main';
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.xxlarge {
+  @include fontStyles($xxLarge);
+}
+
+.xlarge {
+  @include fontStyles($xLarge);
+}
+
+.large {
+  @include fontStyles($large);
+}
+
+.medium {
+  @include fontStyles($med);
+}
+
+.small {
+  @include fontStyles($small);
+}
+
+.xSmall {
+  @include fontStyles($xSmall);
+}
+
+.xxSmall {
+  @include fontStyles($xxSmall);
+}
+
+.xxxSmall {
+  @include fontStyles($xxxSmall);
+}
+
+.primary {
+  @include fontColors(#ffffff);
+}
+
+.secondary {
+  @include fontColors(#4d6896);
+}
+
+.tertiary {
+  @include fontColors(#05090e);
+}
+
+.error {
+  @include fontColors($colorError);
+}
+
+.normal {
+  @include fontWeights($fontWeightNormal);
+}
+
+.medium {
+  @include fontWeights($fontWeightMed);
+}
+
+.bold {
+  @include fontWeights($fontWeightBold);
+}

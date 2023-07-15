@@ -1,0 +1,16 @@
+.loadingStateContainer {
+  background-color: rgba(0, 0, 0, 0.06);
+  height: 388px;
+  position: relative;
+  .innerContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .progressContainer {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

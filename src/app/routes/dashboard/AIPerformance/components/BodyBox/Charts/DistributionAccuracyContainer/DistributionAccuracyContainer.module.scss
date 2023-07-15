@@ -1,0 +1,17 @@
+@import 'styles/css/main';
+
+.root {
+  .paper {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+  .header {
+    border-bottom: 1px solid #e0ecfd;
+
+    .dataTableHeader {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #090f17;
+    }
+  }
+}

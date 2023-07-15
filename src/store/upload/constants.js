@@ -1,0 +1,7 @@
+export const START_SESSION = 'START_SESSION';
+export const SET_TOTAL = 'SET_TOTAL';
+export const SET_UPLOADED = 'SET_UPLOADED';
+export const CLEAR_SESSION = 'CLEAR_SESSION';
+export const SET_META_TOTAL = 'SET_META_TOTAL';
+export const SET_META_UPLOAD_COUNT = 'SET_META_UPLOAD_COUNT';
+export const SET_UPLOAD_STATUS = 'SET_UPLOAD_STATUS';

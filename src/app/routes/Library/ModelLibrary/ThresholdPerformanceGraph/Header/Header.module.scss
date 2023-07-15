@@ -1,0 +1,16 @@
+.headerContainer {
+  .titleContainer {
+    background: #e8f2fe;
+    display: flex;
+    align-items: center;
+    padding: 13px 17px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    svg {
+      margin-right: 9px;
+      color: #000000;
+      cursor: pointer;
+    }
+  }
+}

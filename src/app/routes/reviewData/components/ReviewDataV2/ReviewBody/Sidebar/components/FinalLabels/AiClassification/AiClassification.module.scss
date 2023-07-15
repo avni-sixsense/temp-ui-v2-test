@@ -1,0 +1,11 @@
+@import 'src/styles/css/main';
+@import 'src/styles/css/const';
+
+.aiClassification {
+  @include gridTemplateColumns(80px 1fr);
+
+  .aiDefectBox {
+    border-radius: 4px;
+    background-color: $colorSeptenary;
+  }
+}

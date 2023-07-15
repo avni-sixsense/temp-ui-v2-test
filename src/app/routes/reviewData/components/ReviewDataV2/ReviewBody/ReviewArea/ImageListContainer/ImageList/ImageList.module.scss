@@ -1,0 +1,9 @@
+@import 'styles/css/main';
+
+.scrollableDiv {
+  & > div {
+    @include customSrollbar;
+    overflow-x: hidden !important;
+    scroll-behavior: smooth;
+  }
+}

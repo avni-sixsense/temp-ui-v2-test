@@ -1,0 +1,130 @@
+@import 'src/styles/css/main';
+@import 'src/styles/css/const';
+
+$separator: 1px solid #162236;
+
+.header {
+  border-bottom: $separator;
+  @include flexBetween;
+
+  .icon {
+    cursor: pointer;
+  }
+}
+
+.actionContainer {
+  border-top: $separator;
+}
+
+.textField {
+  background-color: $bgColorSecondary;
+  border: 1px solid $colorTertiary;
+  box-shadow: 0px 1px 2px rgba(14, 22, 35, 0.05);
+  border-radius: $borderRadiusBox;
+  outline: none;
+
+  &.modelTextField {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+
+    & > div {
+      &::after,
+      &::before {
+        border-color: $colorTertiary;
+      }
+
+      & > div > button > span {
+        color: #82a0ce;
+      }
+    }
+  }
+
+  & > div {
+    color: #e0ecfd;
+    font-weight: $fontWeightBold;
+    font-size: 13px;
+  }
+
+  fieldset {
+    border: none;
+  }
+}
+
+.formContainer {
+  display: grid;
+  grid-template-areas:
+    'a b'
+    'c c'
+    'd d'
+    'e e';
+  gap: $med;
+}
+
+.inputContainer {
+  display: grid;
+  gap: $xxxSmall;
+
+  .required {
+    color: #e11d48;
+  }
+}
+
+.btn {
+  height: $xLarge;
+  width: fit-content;
+}
+
+.useCaseContainer {
+  width: 100%;
+
+  @extend .textField;
+
+  & > span {
+    justify-content: space-between;
+
+    &:last-child {
+      color: #82a0ce;
+    }
+  }
+}
+
+.useCaseMenu {
+  width: 424px;
+  color: #e0ecfd;
+  font-weight: $fontWeightBold;
+  font-size: 13px;
+  background-color: $bgColorSecondary;
+  padding: 0 $small;
+  margin-top: $xxxSmall;
+}
+
+.info {
+  color: #82a0ce;
+  font-weight: $fontWeightMed;
+  cursor: pointer;
+
+  span {
+    font-weight: $fontWeightBold;
+    text-decoration: underline;
+  }
+}
+
+.optionsContainer {
+  background-color: inherit;
+  padding-top: $xxxSmall;
+
+  & > div > div {
+    @include customSrollbar;
+
+    & > ul > li > span {
+      &:first-child {
+        padding-left: 2px;
+      }
+
+      font-size: 13px;
+      font-weight: $fontWeightMed;
+      color: #e0ecfd;
+    }
+  }
+}

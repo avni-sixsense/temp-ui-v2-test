@@ -1,0 +1,16 @@
+@import 'styles/css/main';
+
+.searchInput {
+  div[class^='MuiInputBase-root'] {
+    background-color: $bgColorSecondary;
+    border: border(0.2px, solid, $colorTertiary);
+    box-shadow: $boxShadowPrimary;
+    border-radius: 100px;
+  }
+
+  input {
+    color: $colorDenary;
+    padding-top: $xxxSmall;
+    padding-bottom: $xxxSmall;
+  }
+}

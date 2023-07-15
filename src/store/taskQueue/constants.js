@@ -1,0 +1,7 @@
+export const ADD_TASKS = 'ADD_TASKS';
+export const SET_IS_TASKS_RUNNING = 'SET_IS_TASKS_RUNNING';
+export const SET_PENDING_TASKS_IDS = 'SET_PENDING_TASKS_IDS';
+export const UPDATE_TASKS = 'UPDATE_TASKS';
+export const CLEAR_TASKS = 'CLEAR_TASKS';
+export const SET_ACTIVE_MODE = 'SET_ACTIVE_MODE';
+export const ADD_NEXT_PONTER = 'ADD_NEXT_PONTER';

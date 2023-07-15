@@ -1,0 +1,10 @@
+@import 'styles/css/main';
+@import 'styles/css/const';
+
+.sidebar {
+  height: 100%;
+  background-color: $bgColorSecondary;
+  overflow: hidden auto;
+
+  @include customSrollbar;
+}

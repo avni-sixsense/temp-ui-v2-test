@@ -1,0 +1,703 @@
+@import './colors.scss';
+
+html {
+  font-size: 100%;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
+  position: relative;
+  margin: 0;
+}
+
+:focus {
+  outline: none !important;
+}
+
+.MuiTableRow-root.Mui-selected,
+.MuiTableRow-root.Mui-selected:hover {
+  background-color: white !important;
+}
+
+.MuiCheckbox-colorPrimary {
+  color: #02435d !important;
+}
+
+.textClickable {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.DayPicker {
+  width: 100%;
+  height: 100%;
+  .DayPicker-Month {
+    width: 100%;
+    height: 100%;
+    margin: 1em 0 0 0;
+    .DayPicker-Caption {
+      text-align: center;
+      .datePicker {
+        margin-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 148px;
+        height: 41px;
+        border-radius: 3px;
+        border: solid 1px $marine-blue-29;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+      .yearMonthBox {
+        padding-top: 10px;
+      }
+      .year,
+      .month {
+        margin-bottom: 20px;
+        padding-left: 10px;
+        width: 148px;
+        height: 41px;
+        border-radius: 3px;
+        border: solid 1px $marine-blue-29;
+        background-color: $white;
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 30px;
+        color: $marine-blue;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: transparent;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 96%;
+        background-position-y: 5px;
+      }
+      .month {
+        margin-left: 9px;
+      }
+    }
+  }
+}
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  background-color: $grapefruit-two !important;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff !important;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+  background-color: rgba(51, 182, 220, 0.2) !important;
+  color: #000000 !important;
+  border-radius: 2px !important;
+}
+.DayPicker-Day {
+  border-radius: 5px !important;
+}
+.DayPicker-Day,
+.DayPicker-Weekday {
+  font-family: Cabin;
+  font-size: 12px !important;
+  text-align: center;
+  color: #000000 !important;
+  width: 30px;
+  height: 30px;
+}
+
+.DayPicker-Day--outside {
+  opacity: 0.5;
+  font-family: Cabin;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  color: $greyish-brown;
+}
+.DayPicker-Day--today {
+  color: #d0021b !important;
+  font-weight: 700;
+}
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
+  background-color: $grapefruit-two;
+  border: none;
+}
+
+.DayPicker-NavBar {
+  display: none;
+}
+
+.link.ui.basic.button {
+  margin-left: 25px;
+  width: 111px;
+  height: 40px;
+  border-radius: 22px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.link.disable.ui.basic.button {
+  color: $greyish !important;
+  border: solid 1px $greyish;
+}
+
+.link.enable.ui.basic.button {
+  color: $grapefruit-two !important;
+  border: solid 1px $grapefruit-two;
+}
+
+.ss_pointer {
+  cursor: pointer;
+}
+
+.ss_futura {
+  font-family: 'Futura' !important;
+}
+
+.uppy-Root.uppy-StatusBar.iswaiting {
+  display: none;
+}
+
+$marine-blue-13: rgba(2, 67, 93, 0.13);
+$marine-blue: #02435d;
+$marine-blue-8: rgba(2, 67, 93, 0.08);
+$dark-sky-blue-18: rgba(39, 174, 224, 0.5);
+$black-5: rgba(0, 0, 0, 0.05);
+$dark-sky-blue-three: #33b6dc;
+$dark-sky-blue-20: rgba(51, 182, 220, 0.2);
+$dark-sky-blue-three-20: rgba(51, 182, 220, 0.2);
+$azure: #1ca7e5;
+$seafoam-blue: #65d7c8;
+
+@mixin icon($height, $width, $fontSize) {
+  color: #02435d;
+  width: $width;
+  border-radius: 50%;
+  font-size: $fontSize;
+  align-content: center;
+  text-align: center;
+  height: $height;
+  border: 1px solid #02435d;
+}
+
+.info-icon {
+  display: block;
+  // @include icon(12.8px, 12.8px, 8px);
+}
+
+.confusion-grid {
+  margin-bottom: 24px;
+  .h-nav {
+    grid-area: hNav;
+    display: flex;
+    .MuiGrid-item {
+      display: flex;
+    }
+  }
+  .container {
+    display: grid;
+    justify-content: space-evenly;
+    height: auto;
+    width: auto;
+    align-content: space-between;
+    grid-template-areas:
+      '. . hNav . . .'
+      '. . actualData totalATitle recallTitle .'
+      'vNav predicted gridData totalActual recall vScroll'
+      '. totalPTitle totalPredicted . . .'
+      '. precisionTitle precision . . .'
+      '. . hScroll . . .';
+    grid-gap: 15px;
+    color: $marine-blue;
+    cursor: pointer;
+    .v-nav {
+      grid-area: vNav;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        writing-mode: vertical-rl;
+        padding: 10px 0;
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+
+    .h-nav {
+      grid-area: hNav;
+      display: flex;
+      align-items: center;
+      p {
+        padding: 0 10px;
+      }
+    }
+    .actual-data {
+      overflow: hidden;
+      display: grid;
+      grid-area: actualData;
+      grid-template-rows: 200px;
+      text-align: left;
+      .head-cell {
+        font-size: 9px;
+        word-break: break-word;
+        padding: 0 2px;
+        text-transform: capitalize;
+      }
+    }
+    .predicted {
+      overflow: hidden;
+      display: grid;
+      grid-area: predicted;
+      text-align: right;
+      .head-cell {
+        font-size: 9px;
+        word-break: break-word;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        text-transform: capitalize;
+      }
+    }
+    .selected-cell {
+      border: 1px solid #1d4ed8 !important;
+    }
+    .data-container {
+      overflow: scroll;
+      display: grid;
+      grid-area: gridData;
+      .cell {
+        border: 1px solid #ffffff;
+        background: #f3f2f2;
+        text-align: center;
+        margin: 1px;
+        p {
+          line-height: 3.3;
+        }
+      }
+      .diagonal {
+        border: 1px solid #ffffff;
+        background-color: #6fdda2;
+      }
+      .rank0 {
+        border: 1px solid #ffffff;
+        background-color: #ff6868;
+      }
+      .rank1 {
+        border: 1px solid #ffffff;
+        background-color: #ffaa53;
+      }
+      .rank2 {
+        border: 1px solid #ffffff;
+        background-color: #ffcf9e;
+      }
+    }
+
+    .precision {
+      overflow: hidden;
+      display: grid;
+      grid-area: precision;
+      background: #e0ecfd;
+      .cell {
+        border: 1px solid #ffffff;
+        text-align: center;
+        line-height: 3;
+      }
+    }
+    .total-predicted {
+      overflow: hidden;
+      display: grid;
+      grid-area: totalPredicted;
+      background: #e0ecfd;
+      .cell {
+        border: 1px solid #ffffff;
+        text-align: center;
+        line-height: 3;
+      }
+    }
+    .recall {
+      overflow: hidden;
+      display: grid;
+      grid-area: recall;
+      background: #e0ecfd;
+      .cell {
+        text-align: center;
+        border: 1px solid #ffffff;
+        line-height: 3;
+      }
+    }
+    .total-actual {
+      overflow: hidden;
+      display: grid;
+      grid-area: totalActual;
+      background: #e0ecfd;
+      .cell {
+        text-align: center;
+        border: 1px solid #ffffff;
+        line-height: 3;
+      }
+    }
+    .recall-title {
+      grid-area: recallTitle;
+    }
+    .precision-title {
+      width: 50px;
+      grid-area: precisionTitle;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      align-self: flex-start;
+    }
+    .total-predicted-title {
+      grid-area: totalPTitle;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      align-self: flex-start;
+    }
+    .total-actual-title {
+      grid-area: totalATitle;
+    }
+    .h-scroll {
+      grid-area: hScroll;
+      overflow: scroll;
+      display: grid;
+      .cell {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .v-scroll {
+      display: grid;
+      grid-area: vScroll;
+      overflow-y: scroll;
+      .cell {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .v-scroll::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .h-scroll::-webkit-scrollbar:horizontal {
+      height: 4px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 0px;
+    }
+    ::-webkit-scrollbar:horizontal {
+      height: 0px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track,
+    ::-webkit-scrollbar-track:horizontal {
+      box-shadow: inset 0 0 5px $dark-sky-blue-18;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-thumb:horizontal {
+      background: #9cc3d7;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover,
+    ::-webkit-scrollbar-thumb:horizontal:hover {
+      background: #9cc3d7;
+    }
+  }
+}
+
+.ss-capital {
+  text-transform: capitalize;
+}
+
+.ss-textClamp {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cancelBtn:disabled {
+  opacity: 0.24;
+}
+
+.start-date,
+.end-date {
+  color: #ffffff;
+}
+
+.monthselect,
+.yearselect,
+.hourselect,
+.minuteselect {
+  border: 1px solid rgba(2, 67, 93, 0.2) !important;
+  border-radius: 3px;
+  padding: 3px 5px !important;
+}
+
+.monthselect > option,
+.yearselect > option {
+  padding: 10px 5px !important;
+  background-color: transparent;
+}
+
+.today {
+  font-weight: bold;
+}
+
+.daterangepicker {
+  border-width: 0px !important;
+  border-color: #162236 !important;
+  background-color: #1c2a42 !important;
+  color: #f8f7fa !important;
+  font-size: 13px;
+  font-weight: 400;
+  table,
+  thead,
+  tbody,
+  tr,
+  td,
+  div,
+  select {
+    background-color: #1c2a42 !important;
+    .available {
+      color: #f8f7fa !important;
+      font-size: 13px !important;
+      font-weight: 400 !important;
+    }
+  }
+
+  .prev,
+  .next {
+    span {
+      border-color: #f8f7fa !important;
+    }
+    background-color: #1c2a42 !important;
+  }
+
+  .cancelBtn {
+    background-color: #263755 !important;
+    color: #ffffff !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+  }
+  .applyBtn {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+  }
+
+  th {
+    color: #f8f7fa !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    .monthselect,
+    .yearselect {
+      color: #f8f7fa !important;
+      font-size: 14px !important;
+      font-weight: 600 !important;
+      background-color: #263755 !important;
+    }
+  }
+  .hourselect,
+  .minuteselect {
+    color: #f8f7fa !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    background-color: #263755 !important;
+  }
+  .calendar-table,
+  .drp-calender,
+  .left {
+    border-color: #162236 !important;
+    border-width: 0px !important;
+  }
+
+  .drp-buttons {
+    border-color: #4d6896 !important;
+    border-width: 1px !important;
+  }
+
+  .ranges {
+    border-radius: 4px;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    li:hover {
+      background-color: transparent !important;
+    }
+  }
+  .active {
+    background-color: #2563eb !important;
+  }
+  .in-range {
+    background-color: #2563eb !important;
+  }
+  .off {
+    opacity: 0.2 !important;
+  }
+}
+.opensright::before {
+  border-width: 0px !important;
+}
+.opensright::after {
+  border-width: 0px !important;
+}
+.tooltip_container {
+  background-color: #ffffff;
+  padding: 11.5px 6.5px;
+  border-radius: 8px;
+  min-width: 218px;
+  // border: 0.5px solid #4d6896;
+}
+
+.tooltip_key {
+  font-size: 10px;
+  font-weight: 500;
+  color: #4d6896;
+  text-transform: uppercase;
+}
+
+.tooltip_value {
+  font-size: 13px;
+  font-weight: 500;
+  color: #05090e;
+}
+.tooltip_data_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tooltip_header {
+  font-size: 10px;
+  font-weight: 600;
+  color: #1c2a42;
+  margin-bottom: 6.5px;
+}
+
+.cohort_tooltip {
+  font-size: 10px;
+  font-weight: 600;
+  color: #1c2a42;
+  display: flex;
+  align-items: center;
+}
+
+.greenBox {
+  width: 8px;
+  height: 8px;
+  background-color: #6fcf97;
+  margin-right: 5px;
+}
+.yellowBox {
+  width: 8px;
+  height: 8px;
+  background-color: #fde68a;
+  margin-right: 5px;
+}
+.brownBox {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(217, 119, 6, 0.6);
+  margin-right: 5px;
+}
+.redBox {
+  width: 8px;
+  height: 8px;
+  background-color: #fb7185;
+  margin-right: 5px;
+}
+.pinkBox {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(251, 113, 133, 0.4);
+  margin-right: 5px;
+}
+.chart {
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  /* Track */
+
+  /* Handle on hover */
+}
+
+.chart::-webkit-scrollbar {
+  height: 8px;
+}
+
+.chart::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0px white;
+  border-radius: 5px;
+}
+
+.chart::-webkit-scrollbar-thumb {
+  background: #dfdcdc;
+  border-radius: 10px;
+}
+.chart::-webkit-scrollbar-thumb:hover {
+  background: #cecece;
+}
+
+.toastContainer {
+  background-color: #162236 !important;
+  border-radius: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  box-shadow: 0px 10px 10px rgba(14, 22, 35, 0.04),
+    0px 20px 25px rgba(14, 22, 35, 0.1) !important;
+  border: 0.3px solid #31456a !important;
+  padding: 12px !important;
+  min-height: 48px !important;
+  button {
+    align-self: center !important;
+
+    svg {
+      color: #ffffff !important;
+      width: 8px !important;
+      height: 12px !important;
+    }
+  }
+}
+
+.toastBody {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.rdt_Table {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px white;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #dfdcdc;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #cecece;
+  }
+}
+
+div[class^='MuiInputBase-root'] {
+  fieldset {
+    top: 0px;
+  }
+}

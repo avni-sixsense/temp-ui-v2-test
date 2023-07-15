@@ -1,0 +1,60 @@
+@import 'src/styles/css/main';
+@import 'src/styles/css/const';
+
+.formContainer {
+  border-bottom: border($borderColor: $colorSenary);
+
+  .form {
+    display: grid;
+    gap: $large;
+    color: $colorTertiary;
+    margin-bottom: $xxLarge;
+
+    & > div:not([type='radio']) {
+      display: grid;
+      @include gridTemplateColumns(minmax(auto, 120px) 310px);
+      @include gridTemplateRows(38px);
+      align-items: center;
+
+      label {
+        margin: unset;
+      }
+    }
+  }
+}
+
+.select {
+  height: 100%;
+  @include borderStyles;
+  font-weight: $med;
+  padding: $small $large;
+}
+
+.input {
+  padding: unset;
+  height: 100%;
+  @include borderStyles;
+
+  fieldset {
+    display: none;
+  }
+
+  & > div {
+    height: 100%;
+    @include fontStyles($med !important);
+
+    input {
+      padding: $small $large;
+
+      &:not(:disabled):hover {
+        background: rgba(2, 67, 93, 0.04);
+      }
+    }
+  }
+}
+
+.placeholder,
+.input > div > input::-webkit-input-placeholder {
+  color: $colorPrimary;
+  opacity: 1;
+}

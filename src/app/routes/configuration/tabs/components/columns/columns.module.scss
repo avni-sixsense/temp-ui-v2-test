@@ -1,0 +1,21 @@
+.userNameContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: inherit;
+
+  .deactivateContainer {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #e11d48;
+
+    svg {
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: #e11d48;
+    }
+  }
+}

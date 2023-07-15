@@ -1,0 +1,62 @@
+@import 'src/styles/css/main';
+
+.radioGroup {
+  @include fontInherit;
+
+  display: grid;
+  gap: 1rem;
+  width: fit-content;
+
+  &[direction='column'] {
+    @include gridFlowColumn;
+  }
+
+  .radioContainer {
+    display: flex;
+    align-items: center;
+
+    & * {
+      cursor: pointer;
+    }
+
+    .radioBtn {
+      -webkit-appearance: none;
+      appearance: none;
+
+      color: $colorQuinary;
+      margin-right: 6px;
+
+      background-color: $colorNonary;
+      border: border($borderColor: $colorSenary);
+      width: $med;
+      height: $med;
+      border-radius: 50%;
+
+      position: relative;
+
+      &:checked {
+        border: none;
+
+        &::before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+          border: border(4px, solid, $borderColor: $colorQuinary);
+        }
+      }
+    }
+
+    .label {
+      margin: unset;
+      font-size: $med;
+    }
+  }
+
+  &[disabled] {
+    .radioContainer {
+      @include disabled;
+    }
+  }
+}

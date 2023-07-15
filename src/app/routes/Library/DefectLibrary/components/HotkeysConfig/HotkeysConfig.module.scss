@@ -1,0 +1,53 @@
+@import 'styles/css/main';
+
+.dialog {
+  background-color: unset !important;
+}
+
+.paper {
+  border-radius: 8px;
+  border: 0.2px solid #a8c3e8;
+  background-color: #fff;
+  box-shadow: 0px 25px 50px -12px rgba(14, 22, 35, 0.08);
+  width: 360px;
+
+  & > div {
+    padding: 0.5rem 1rem;
+  }
+
+  .header {
+    .titleContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #090f17;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 0.8125rem;
+      color: #5e7baa;
+    }
+  }
+
+  .itemContiner {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 300px;
+    overflow-y: auto;
+    border-bottom: 1px solid #e0ecfd;
+    border-top: 1px solid #e0ecfd;
+  }
+
+  .actionBtns {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}

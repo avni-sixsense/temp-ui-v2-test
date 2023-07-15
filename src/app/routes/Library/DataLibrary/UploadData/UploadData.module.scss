@@ -1,0 +1,8 @@
+@import 'src/styles/css/main';
+
+.uploadData {
+  display: grid;
+  @include gridTemplateRows(auto 1fr auto);
+  height: 100%;
+  @include fontStyles($large);
+}

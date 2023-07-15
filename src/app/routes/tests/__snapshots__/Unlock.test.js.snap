@@ -1,0 +1,428 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test case for <ForgetPassword> page should have same markup 1`] = `
+<div
+  className="MuiPaper-root makeStyles-paper-1 MuiPaper-elevation3 MuiPaper-rounded"
+>
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 MuiGrid-justify-xs-center"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-10"
+    >
+      <h1
+        className="MuiTypography-root makeStyles-title-3 MuiTypography-h1"
+      >
+        Unlock Backend
+      </h1>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1 MuiGrid-grid-sm-1"
+    >
+      <img
+        alt=""
+        className="makeStyles-closeBtn-4"
+        src="close.svg"
+      />
+    </div>
+  </div>
+  <form
+    className="makeStyles-unlockForm-2"
+    noValidate={true}
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 MuiGrid-justify-xs-center"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      >
+        <div
+          className="MuiFormControl-root makeStyles-formControl-167"
+        >
+          <p
+            className="MuiFormHelperText-root"
+          >
+            <span
+              className="MuiTypography-root makeStyles-inputLabel-168 MuiTypography-caption"
+            >
+              First Name
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                  }
+                }
+              >
+                *
+              </span>
+            </span>
+          </p>
+          <div
+            className="MuiInputBase-root MuiOutlinedInput-root makeStyles-input-170 MuiInputBase-formControl"
+            onClick={[Function]}
+          >
+            <input
+              aria-invalid={false}
+              className="MuiInputBase-input MuiOutlinedInput-input"
+              disabled={false}
+              id="base-input-"
+              name=""
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden={true}
+              className="PrivateNotchedOutline-root-216 MuiOutlinedInput-notchedOutline"
+              style={
+                Object {
+                  "paddingLeft": 8,
+                }
+              }
+            >
+              <legend
+                className="PrivateNotchedOutline-legend-217"
+                style={
+                  Object {
+                    "width": 0.01,
+                  }
+                }
+              >
+                <span
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "&#8203;",
+                    }
+                  }
+                />
+              </legend>
+            </fieldset>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      >
+        <div
+          className="MuiFormControl-root makeStyles-formControl-167"
+        >
+          <p
+            className="MuiFormHelperText-root"
+          >
+            <span
+              className="MuiTypography-root makeStyles-inputLabel-168 MuiTypography-caption"
+            >
+              Last Name
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                  }
+                }
+              >
+                *
+              </span>
+            </span>
+          </p>
+          <div
+            className="MuiInputBase-root MuiOutlinedInput-root makeStyles-input-170 MuiInputBase-formControl"
+            onClick={[Function]}
+          >
+            <input
+              aria-invalid={false}
+              className="MuiInputBase-input MuiOutlinedInput-input"
+              disabled={false}
+              id="base-input-"
+              name=""
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden={true}
+              className="PrivateNotchedOutline-root-216 MuiOutlinedInput-notchedOutline"
+              style={
+                Object {
+                  "paddingLeft": 8,
+                }
+              }
+            >
+              <legend
+                className="PrivateNotchedOutline-legend-217"
+                style={
+                  Object {
+                    "width": 0.01,
+                  }
+                }
+              >
+                <span
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "&#8203;",
+                    }
+                  }
+                />
+              </legend>
+            </fieldset>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      >
+        <div
+          className="MuiFormControl-root makeStyles-formControl-167"
+        >
+          <p
+            className="MuiFormHelperText-root"
+          >
+            <span
+              className="MuiTypography-root makeStyles-inputLabel-168 MuiTypography-caption"
+            >
+              Email Address
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                  }
+                }
+              >
+                *
+              </span>
+            </span>
+          </p>
+          <div
+            className="MuiInputBase-root MuiOutlinedInput-root makeStyles-input-170 MuiInputBase-formControl"
+            onClick={[Function]}
+          >
+            <input
+              aria-invalid={false}
+              className="MuiInputBase-input MuiOutlinedInput-input"
+              disabled={false}
+              id="base-input-"
+              name=""
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden={true}
+              className="PrivateNotchedOutline-root-216 MuiOutlinedInput-notchedOutline"
+              style={
+                Object {
+                  "paddingLeft": 8,
+                }
+              }
+            >
+              <legend
+                className="PrivateNotchedOutline-legend-217"
+                style={
+                  Object {
+                    "width": 0.01,
+                  }
+                }
+              >
+                <span
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "&#8203;",
+                    }
+                  }
+                />
+              </legend>
+            </fieldset>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      >
+        <div
+          className="MuiFormControl-root makeStyles-formControl-167"
+        >
+          <p
+            className="MuiFormHelperText-root"
+          >
+            <span
+              className="MuiTypography-root makeStyles-inputLabel-168 MuiTypography-caption"
+            >
+              Phone Number
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                  }
+                }
+              >
+                *
+              </span>
+            </span>
+          </p>
+          <div
+            className="MuiInputBase-root MuiOutlinedInput-root makeStyles-input-170 MuiInputBase-formControl"
+            onClick={[Function]}
+          >
+            <input
+              aria-invalid={false}
+              className="MuiInputBase-input MuiOutlinedInput-input"
+              disabled={false}
+              id="base-input-"
+              name=""
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden={true}
+              className="PrivateNotchedOutline-root-216 MuiOutlinedInput-notchedOutline"
+              style={
+                Object {
+                  "paddingLeft": 8,
+                }
+              }
+            >
+              <legend
+                className="PrivateNotchedOutline-legend-217"
+                style={
+                  Object {
+                    "width": 0.01,
+                  }
+                }
+              >
+                <span
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "&#8203;",
+                    }
+                  }
+                />
+              </legend>
+            </fieldset>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12"
+      >
+        <div
+          className="MuiFormControl-root MuiFormControl-fullWidth"
+        >
+          <p
+            className="MuiFormHelperText-root"
+          >
+            <span
+              className="MuiTypography-root makeStyles-inputLabel-168 MuiTypography-caption"
+            >
+              Message
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                  }
+                }
+              >
+                *
+              </span>
+            </span>
+          </p>
+          <div
+            className="MuiFormControl-root MuiTextField-root makeStyles-textArea-169 MuiFormControl-fullWidth"
+          >
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
+              onClick={[Function]}
+            >
+              <textarea
+                aria-invalid={false}
+                autoFocus={false}
+                className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
+                defaultValue="type your message here…"
+                disabled={false}
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={false}
+                rows={4}
+              />
+              <fieldset
+                aria-hidden={true}
+                className="PrivateNotchedOutline-root-216 MuiOutlinedInput-notchedOutline"
+                style={
+                  Object {
+                    "paddingLeft": 8,
+                  }
+                }
+              >
+                <legend
+                  className="PrivateNotchedOutline-legend-217"
+                  style={
+                    Object {
+                      "width": 0.01,
+                    }
+                  }
+                >
+                  <span
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "&#8203;",
+                      }
+                    }
+                  />
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-xs-center"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-text"
+          disabled={false}
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            Request For Unlock
+          </span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+`;

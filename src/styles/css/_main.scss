@@ -1,0 +1,192 @@
+@import './const';
+
+@mixin fontColors($fontColor: $colorPrimary) {
+  color: $fontColor;
+}
+
+@mixin fontWeights($fontWeight: 500) {
+  font-weight: $fontWeight;
+}
+
+// Font
+@mixin fontStyles(
+  $fontSize: 1rem,
+  $fontWeight: $fontWeightMed,
+  $color: $colorQuaternary
+) {
+  font-family: $fontFamily1;
+  font-style: $fontStyle;
+  @include fontWeights($fontWeight);
+  font-size: $fontSize;
+  @include fontColors($color);
+}
+
+@mixin fontInherit($fontSize: 0, $color: false) {
+  font: inherit;
+
+  @if $fontSize != 0 {
+    font-size: $fontSize;
+  }
+
+  @if $color {
+    color: $color;
+  } @else {
+    color: inherit;
+  }
+}
+
+// Border
+@function border(
+  $borderWidth: 1px,
+  $borderStyle: solid,
+  $borderColor: $colorSecondary
+) {
+  @return $borderWidth $borderStyle $borderColor;
+}
+
+@mixin borderStyles {
+  border: border();
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.05));
+  border-radius: $borderRadius;
+}
+
+// Grid
+@mixin gridTemplateColumns($columns...) {
+  grid-template-columns: $columns;
+}
+
+@mixin gridTemplateRows($rows...) {
+  grid-template-rows: $rows;
+}
+
+@mixin gridCenter {
+  place-items: center;
+}
+
+@mixin gridSpaceBetween {
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+@mixin gridColCenter($gap: $small) {
+  display: grid;
+  grid-auto-flow: column;
+  align-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin gridFlowColumn {
+  grid-auto-flow: column;
+}
+
+// Flex
+@mixin flexCenter {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > div {
+    margin: $xxxSmall;
+  }
+}
+
+// Header
+@mixin headerStyles {
+  margin: unset;
+  font-weight: $fontWeightBold;
+  font-size: $large;
+}
+
+// Text
+@mixin textEllipses {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// Disabled
+@mixin disabled() {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
+}
+
+// Scrollbar
+@mixin hideScrollbar() {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@mixin customSrollbar() {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $colorTertiary;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #eeeeee;
+  }
+}
+
+// Spin timer
+@mixin spin($timeframe: 2s) {
+  animation: rotation $timeframe infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+// Background
+@mixin bgTransparent {
+  background-color: transparent;
+}
+
+// User Select
+@mixin disableUserSelect {
+  user-select: none;
+}

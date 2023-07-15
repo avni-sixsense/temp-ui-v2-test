@@ -1,0 +1,11 @@
+@import 'src/styles/css/const';
+
+.dropZoneContainer {
+  height: calc(84px + (2 * #{$small}));
+}
+
+.fileFormatSupported {
+  font-size: $med;
+  font-weight: 400;
+  padding: 0 $large;
+}

@@ -1,0 +1,43 @@
+@import 'src/styles/css/main';
+
+.filterBox {
+  @include gridColCenter($xxxSmall);
+  border: 0.8px solid $colorSenary;
+  border-radius: 2px;
+  background-color: $colorDenary;
+  padding: $xxxSmall $xxSmall;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px rgb(14 22 35 / 6%), 0px 1px 3px rgb(14 22 35 / 10%);
+  @include disableUserSelect;
+
+  &.filterBoxViewMode {
+    cursor: default;
+    box-shadow: none;
+  }
+
+  .label {
+    font-weight: $fontWeightBold;
+    font-size: $med;
+    color: $colorSeptenary;
+  }
+
+  .icon {
+    color: #95b2dd;
+    font-size: $xSmall;
+  }
+
+  .closeBtn {
+    border: none;
+    box-shadow: none;
+  }
+
+  &.darkFilterBox {
+    background-color: $bgColorPrimary;
+    border-color: transparent;
+  }
+}
+
+.hideFilterBox {
+  margin: 0 !important;
+  visibility: hidden;
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1894" height="1278" viewBox="0 0 1894 1278">
+    <defs>
+        <linearGradient id="prefix__b" x1="77.85%" x2="26.632%" y1="-6.175%" y2="68.232%">
+            <stop offset="0%" stop-color="#1CA7E5"/>
+            <stop offset="100%" stop-color="#65D7C8" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="prefix__d" x1="77.85%" x2="31.456%" y1="-6.175%" y2="100%">
+            <stop offset="0%" stop-color="#1CA7E5"/>
+            <stop offset="100%" stop-color="#65D7C8" stop-opacity="0"/>
+        </linearGradient>
+        <path id="prefix__a" d="M20.234 0h1345v768H.235V20c0-11.046 8.954-20 20-20z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(528 170)">
+            <mask id="prefix__c" fill="#fff">
+                <use xlink:href="#prefix__a"/>
+            </mask>
+            <use fill="#FAFEFF" xlink:href="#prefix__a"/>
+            <path fill="url(#prefix__b)" d="M961.415 384.532l547.94-6.698c44.179-.54 80.431 34.837 80.971 79.016.008.652.008 1.304 0 1.956l-6.697 547.939c-.531 43.418-35.599 78.485-79.017 79.016l-547.939 6.698c-44.18.54-80.432-34.837-80.972-79.016-.008-.652-.008-1.304 0-1.956l6.698-547.939c.53-43.418 35.599-78.486 79.016-79.016z" mask="url(#prefix__c)" opacity=".1" transform="rotate(-45 1233.014 735.146)"/>
+            <path fill="#1CA7E5" d="M-614.177 227.165l296.235 20.987c19.863 1.407 35.666 17.21 37.073 37.073l20.987 296.236c1.561 22.036-15.037 41.165-37.073 42.727-1.882.133-3.771.133-5.654 0L-598.844 603.2c-19.863-1.408-35.666-17.21-37.073-37.074l-20.987-296.235c-1.561-22.036 15.037-41.166 37.073-42.727 1.882-.133 3.772-.133 5.654 0z" mask="url(#prefix__c)" opacity=".1" transform="rotate(-45 -458.393 425.676)"/>
+        </g>
+        <path fill="url(#prefix__d)" d="M282.158 194.834L954.3 250.62c38.959 3.234 69.875 34.15 73.108 73.11l55.786 672.142c3.655 44.032-29.077 82.689-73.108 86.343-4.404.366-8.83.366-13.234 0l-672.143-55.786c-38.96-3.233-69.876-34.15-73.11-73.109l-55.785-672.143c-3.655-44.031 29.077-82.688 73.109-86.343 4.403-.365 8.83-.365 13.234 0z" opacity=".1" transform="rotate(-45 639.505 638.525)"/>
+    </g>
+</svg>

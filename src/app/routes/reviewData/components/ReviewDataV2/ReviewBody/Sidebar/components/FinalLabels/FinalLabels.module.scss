@@ -1,0 +1,12 @@
+@import 'src/styles/css/main';
+
+.finalLabels {
+  display: grid;
+  gap: $small;
+
+  & > div {
+    display: grid;
+    align-items: center;
+    gap: $xxSmall;
+  }
+}

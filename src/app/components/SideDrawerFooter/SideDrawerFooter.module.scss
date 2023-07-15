@@ -1,0 +1,32 @@
+@import 'src/styles/css/main';
+
+.footer {
+  & > div {
+    padding: $small $large;
+  }
+
+  .infoContainer {
+    .info {
+      display: grid;
+      @include gridTemplateColumns(auto 1fr);
+      @include gridCenter;
+      gap: $med;
+      border: border($borderColor: $colorOctonary);
+      background-color: $colorNonary;
+      font-size: $med;
+      border-radius: $borderRadiusBox;
+      padding: $small $large;
+    }
+
+    .icon {
+      font-size: 1.5rem;
+    }
+  }
+
+  .actionBtns {
+    border-top: border($borderColor: $colorSenary);
+    .actionBtn {
+      margin-right: 8px;
+    }
+  }
+}

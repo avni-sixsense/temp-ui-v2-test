@@ -1,0 +1,32 @@
+@import 'src/styles/css/main';
+@import 'src/styles/css/const';
+
+.container {
+  background-color: $colorDenary;
+  border: border($borderColor: #e0ecfd);
+  border-radius: $borderRadiusBox;
+  padding: $large 0;
+
+  display: grid;
+  @include gridTemplateRows(1fr 1fr);
+  gap: $med;
+
+  & > div {
+    display: grid;
+    align-items: center;
+    @include gridTemplateColumns(minmax(180px, 0.25fr) 250px);
+    padding: 0 $large;
+
+    & > div:first-child {
+      color: $colorTertiary;
+      font-size: $small;
+      font-weight: $fontWeightMed;
+      min-width: max-content;
+    }
+  }
+
+  .separation {
+    border-top: 1px solid #e0ecfd;
+    padding-top: $med;
+  }
+}

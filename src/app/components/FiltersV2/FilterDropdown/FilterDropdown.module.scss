@@ -1,0 +1,17 @@
+@import 'src/styles/css/const';
+@import 'src/styles/css/main';
+
+.popper {
+  background-color: $colorDenary;
+  width: 300px;
+  padding: $xxSmall;
+  margin-top: $xxSmall;
+  border: border($borderColor: $colorSenary);
+  border-radius: $borderRadiusBox;
+  z-index: 1300;
+
+  &.darkPopper {
+    background-color: $borderColorPrimary;
+    border-color: transparent;
+  }
+}

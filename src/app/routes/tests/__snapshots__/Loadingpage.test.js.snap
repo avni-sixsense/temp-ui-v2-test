@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoadingPage /> should render should work 1`] = `
+<div
+  className="MuiPaper-root makeStyles-paper-1 MuiPaper-elevation0 MuiPaper-rounded"
+>
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-center"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-item"
+    >
+      <h1
+        className="MuiTypography-root makeStyles-title-2 MuiTypography-h1"
+      >
+        Loading
+         
+        <span
+          className="makeStyles-StrongFont-3"
+        >
+          classifAI
+        </span>
+         
+        Platform
+      </h1>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-item"
+    >
+      <img
+        alt=""
+        className="makeStyles-successImg-4"
+        src="loading.svg"
+      />
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-item"
+    >
+      <div
+        aria-valuenow={0}
+        className="MuiLinearProgress-root MuiLinearProgress-colorSecondary MuiLinearProgress-determinate"
+        role="progressbar"
+      >
+        <div
+          className="MuiLinearProgress-bar MuiLinearProgress-barColorSecondary MuiLinearProgress-bar1Determinate"
+          style={
+            Object {
+              "transform": "translateX(-100%)",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

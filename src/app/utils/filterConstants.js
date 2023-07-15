@@ -1,0 +1,20 @@
+export const AIPerformance24x7 = '24*7 Monitoring';
+export const UATFilter = 'UAT';
+export const OnDemandAudit = 'On-demand Audit';
+export const DataLibrary = 'Data_Library';
+export const WaferLibrary = 'Wafer_Library';
+export const ModelLibrary = 'Model_Library';
+export const ModelRetrain = 'Model_Retrain';
+export const ModelTrain = 'Model_Train';
+export const DefectLibrary = 'Defect_Library';
+export const UseCaseLibrary = 'UseCase_Library';
+export const ReviewScreen = 'review';
+export const ManuallyReclass = 'manual-classify';
+export const AuditFlow = 'audit';
+export const FilterKey = 'filters';
+export const WaferBook = 'Wafer_Book';
+export const ModelPerformance = 'Model_performance';
+
+export const UploadSessionTag = 'upload_session_tag';
+export const FilesetTag = 'file_set_tag';
+export const WaferMapTag = 'wafer_map_tag';

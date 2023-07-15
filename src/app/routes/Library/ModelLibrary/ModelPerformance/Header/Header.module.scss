@@ -1,0 +1,71 @@
+@import 'src/styles/css/main';
+
+.headerContainer {
+  margin: 0 -10px;
+
+  .titleContainer {
+    @include flexBetween;
+    background-color: #e8f2fe;
+    padding: 13px 17px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #111827;
+
+      svg {
+        margin-right: 9px;
+        color: #000000;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .infoContainer {
+    background-color: #ffffff;
+
+    .detailsContainer {
+      padding: 15px 16px;
+      display: flex;
+      column-gap: 64px;
+      align-items: center;
+
+      .valueContainer {
+        display: grid;
+        gap: 8px;
+        grid-template-columns: (auto 1fr);
+        align-items: center;
+
+        .title {
+          font-size: 0.75rem;
+          font-weight: 500;
+          color: #31456a;
+        }
+
+        .value {
+          font-size: 0.875rem;
+          font-weight: 600;
+          color: #05090e;
+        }
+
+        &:last-child {
+          .value {
+            background-color: #fde68a;
+            border-radius: 14px;
+            padding: 4px 8px;
+          }
+        }
+      }
+    }
+
+    .filterContainer {
+      padding: 15px 16px;
+      border-top: 1px solid #cee0f8;
+    }
+  }
+}
+.containerOuter {
+  padding: 0px 20px 0px 20px;
+}

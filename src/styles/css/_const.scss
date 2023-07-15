@@ -1,0 +1,46 @@
+// Sizes (font + spacing)
+$xxLarge: 2rem; // 32px (spacing)
+$xLarge: 1.5rem; // 24px (spacing)
+$large: 1rem; // 16px (font + spacing)
+$med: 0.875rem; // 14px (font + spacing)
+$small: 0.75rem; // 12px (font + spacing)
+$xSmall: 0.625rem; // 10px (spacing)
+$xxSmall: 0.5rem; // 8px (spacing)
+$xxxSmall: 0.25rem; // 4px (spacing)
+
+// Fonts
+$fontStyle: normal;
+$fontWeightBold: 600;
+$fontWeightMed: 500;
+$fontWeightNormal: 400;
+$fontFamily1: 'IBM Plex Sans';
+$fontFamily2: 'IBM Plex Mono';
+
+// Border
+$borderRadius: 6px;
+$borderRadiusBox: 4px;
+
+// Colors
+$colorPrimary: #5e7baa;
+$colorSecondary: #bbd2f1;
+$colorTertiary: #31456a;
+$colorQuaternary: #090f17;
+$colorQuinary: #2563eb;
+$colorSenary: #cee0f8;
+$colorSeptenary: #05090e;
+$colorOctonary: #a8c3e8;
+$colorNonary: #e8f2fe;
+$colorDenary: #fff;
+
+$colorError: #f43f5e;
+
+// BgColor
+$bgColorPrimary: #263755;
+$bgColorSecondary: #162236;
+
+// Border Colors
+$borderColorPrimary: #1c2a42;
+
+// Box Shadow
+$boxShadowPrimary: 0px 2px 4px rgba(14, 22, 35, 0.06),
+  0px 4px 6px rgba(14, 22, 35, 0.1);

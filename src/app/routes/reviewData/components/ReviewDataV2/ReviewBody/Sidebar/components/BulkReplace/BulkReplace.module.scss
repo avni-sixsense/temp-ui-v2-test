@@ -1,0 +1,57 @@
+@import 'src/styles/css/main';
+@import 'src/styles/css/const';
+
+.bulkReplaceContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .info {
+    white-space: nowrap;
+    font-style: italic;
+  }
+}
+
+.modal {
+  display: flex;
+  @include flexCenter;
+
+  .paper {
+    background-color: #0e1623;
+    min-width: 16.5rem;
+
+    & > div {
+      padding: $med $small;
+    }
+
+    .headerContainer {
+      border-bottom: border($borderColor: $bgColorSecondary);
+      @include flexBetween;
+
+      .header,
+      .closeIcon {
+        color: $colorDenary;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        padding: 0;
+      }
+    }
+
+    .modalBody {
+      display: grid;
+      gap: $med;
+
+      .modalActionBtns {
+        width: fit-content;
+        margin-top: $xSmall;
+        display: flex;
+        gap: 8px;
+      }
+    }
+
+    .modalText {
+      font-size: 0.8125rem;
+      color: #4d6896;
+    }
+  }
+}

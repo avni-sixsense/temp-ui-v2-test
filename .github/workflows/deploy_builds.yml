@@ -1,0 +1,62 @@
+name: Deploying to Google Cloud
+
+on:
+  push:
+    branches: [new_ai_performance_design, staging2, staging1, staging, master]
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup node engine
+        uses: actions/setup-node@v3
+        with:
+            node-version: 18.x
+
+      - name: Setup SSH Key
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_GH_ACTIONS }}
+
+      - name: Read env from JSON
+        id: read-env
+        run: |-
+          content=$(cat ./.github/json/deploy_builds.json)
+          content="${content//'%'/'%25'}"
+          content="${content//$'\n'/'%0A'}"
+          content="${content//$'\r'/'%0D'}"
+          echo "::set-output name=BUILD_ENV_JSON::$content"
+
+      - name: Set current branch name
+        id: set-current-branch
+        run: echo "::set-output name=branch::${GITHUB_REF#refs/heads/}"
+
+      - name: Set build env
+        run: |-
+          echo GCS_BUCKET="${{ fromJSON(steps.read-env.outputs.BUILD_ENV_JSON)[steps.set-current-branch.outputs.branch].GCS_BUCKET }}" >> $GITHUB_ENV
+          echo REACT_APP_UPLOAD_TYPE="${{ fromJSON(steps.read-env.outputs.BUILD_ENV_JSON)[steps.set-current-branch.outputs.branch].REACT_APP_UPLOAD_TYPE }}" >> $GITHUB_ENV
+          echo REACT_APP_USE_ORIGIN_URL="${{ fromJSON(steps.read-env.outputs.BUILD_ENV_JSON)[steps.set-current-branch.outputs.branch].REACT_APP_USE_ORIGIN_URL }}" >> $GITHUB_ENV
+          echo SKIP_PREFLIGHT_CHECK="${{ fromJSON(steps.read-env.outputs.BUILD_ENV_JSON)[steps.set-current-branch.outputs.branch].SKIP_PREFLIGHT_CHECK }}" >> $GITHUB_ENV
+          echo CI="${{ fromJSON(steps.read-env.outputs.BUILD_ENV_JSON)[steps.set-current-branch.outputs.branch].CI }}" >> $GITHUB_ENV
+          echo REACT_APP_CUSTOMER="${{ fromJSON(steps.read-env.outputs.BUILD_ENV_JSON)[steps.set-current-branch.outputs.branch].REACT_APP_CUSTOMER }}" >> $GITHUB_ENV
+          echo REACT_APP_CONVERT_HTTP_TO_HTTPS="${{ fromJSON(steps.read-env.outputs.BUILD_ENV_JSON)[steps.set-current-branch.outputs.branch].REACT_APP_CONVERT_HTTP_TO_HTTPS }}" >> $GITHUB_ENV
+          if [[ "${{ fromJSON(steps.read-env.outputs.BUILD_ENV_JSON)[steps.set-current-branch.outputs.branch].REACT_APP_LOG_ROCKET_ID }}" != "null" ]]; then
+            echo REACT_APP_LOG_ROCKET_ID="${{ fromJSON(steps.read-env.outputs.BUILD_ENV_JSON)[steps.set-current-branch.outputs.branch].REACT_APP_LOG_ROCKET_ID }}" >> $GITHUB_ENV
+          fi
+          echo REACT_APP_USE_AUTH_COOKIES="${{ fromJSON(steps.read-env.outputs.BUILD_ENV_JSON)[steps.set-current-branch.outputs.branch].REACT_APP_USE_AUTH_COOKIES }}" >> $GITHUB_ENV
+
+      - name: Creating a fresh build
+        run: yarn install && yarn build
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v0
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+          export_default_credentials: true
+
+      - name: Sync ${{ steps.set-current-branch.outputs.branch }}
+        run: gsutil -m rsync -r build gs://${{ env.GCS_BUCKET }}

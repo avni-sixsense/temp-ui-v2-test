@@ -1,0 +1,10 @@
+@import 'src/styles/css/main';
+@import 'src/styles/css/const';
+
+.userClassification {
+  @include gridTemplateColumns(80px 1fr auto);
+
+  .info {
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,43 @@
+@import 'styles/css/main';
+
+.paper {
+  border-radius: 4px;
+  padding: 15px 10px;
+  width: 290px;
+
+  .header {
+    p {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: #090f17;
+    }
+    border-bottom: 1px solid #cee0f8;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .closeIcon {
+      color: #95b2dd;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0;
+    }
+  }
+
+  .info {
+    p {
+      font-weight: 400;
+      font-size: 0.8125rem;
+      color: #5e7baa;
+    }
+    margin-bottom: 20px;
+  }
+
+  .buttonGrp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}

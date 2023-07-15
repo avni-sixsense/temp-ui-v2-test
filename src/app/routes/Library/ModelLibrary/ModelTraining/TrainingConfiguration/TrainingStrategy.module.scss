@@ -1,0 +1,54 @@
+@import 'src/styles/css/main';
+
+.container {
+  .collapseContainer {
+    background-color: white;
+
+    .containerPadding {
+      padding: 10px 16px;
+      border-bottom: 1px solid #cee0f8;
+    }
+
+    .flexBox {
+      display: flex;
+      align-items: center;
+    }
+
+    .indexContainer {
+      padding: 7px 10.5px;
+      border-radius: 4px;
+      background-color: #e0ecfd;
+      color: #2563eb;
+      border: 1px solid #a8c3e8;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .title {
+      margin-left: 12px;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .radioGroup {
+      // margin-bottom: 12px;
+
+      .strategyTitle {
+        margin-right: 33px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: #31456a;
+      }
+    }
+  }
+
+  .headerContainer {
+    margin-bottom: 16px;
+
+    .header {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #1c2a42;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import 'styles/css/main';
+@import 'styles/css/const';
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.counter {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  color: #cee0f8;
+}
+
+.counterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.labelContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #e8f2fe;
+}

@@ -1,0 +1,31 @@
+@import 'src/styles/css/const';
+@import 'src/styles/css/main';
+
+.label {
+  font-weight: $fontWeightBold;
+  font-size: $med;
+  color: $colorSeptenary;
+
+  .subLabel {
+    background-color: $colorNonary;
+    margin-left: $xxxSmall;
+    padding: 0 $xxxSmall 1px;
+    border-radius: 50%;
+  }
+
+  &.darkLabel {
+    color: $colorDenary;
+
+    .subLabel {
+      background-color: $colorPrimary;
+    }
+  }
+}
+.labelView {
+  color: #3e5680;
+  font-size: 12px;
+}
+.labelValues {
+  font-weight: $fontWeightBold;
+  color: $colorQuaternary;
+}

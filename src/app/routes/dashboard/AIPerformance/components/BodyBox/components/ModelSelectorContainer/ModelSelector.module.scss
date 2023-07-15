@@ -1,0 +1,48 @@
+@import 'styles/css/main';
+
+.paper {
+  margin: 8px;
+  padding: 20px 14px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.root {
+  fieldset {
+    border: none;
+  }
+}
+
+.popper {
+  li[data-focus='true'] {
+    background-color: #e8f2fe;
+  }
+
+  li[aria-selected='true'] {
+    background-color: #e0ecfd;
+  }
+}
+
+.options {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #090f17;
+
+  :hover {
+    background-color: black !important;
+  }
+}
+
+.inputRoot,
+.inputFocused {
+  background-color: #f0f7ff;
+  border: 1px solid #e0ecfd;
+}
+
+.clearIndicator {
+  display: none;
+}

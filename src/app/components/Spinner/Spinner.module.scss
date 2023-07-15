@@ -1,0 +1,7 @@
+@import 'src/styles/css/main';
+
+.spinnerContainer {
+  display: flex;
+  @include flexCenter;
+  height: 100%;
+}

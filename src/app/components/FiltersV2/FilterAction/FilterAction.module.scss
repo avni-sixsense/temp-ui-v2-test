@@ -1,0 +1,14 @@
+@import 'src/styles/css/main';
+
+.filterActions {
+  @include gridColCenter;
+  margin: $xxxSmall;
+}
+
+.darkButton {
+  background-color: $bgColorPrimary;
+
+  &:hover {
+    background-color: $colorTertiary;
+  }
+}

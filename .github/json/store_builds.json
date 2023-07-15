@@ -1,0 +1,82 @@
+{
+  "GIGA_temp": [
+    {
+      "id": "GIGA_NON_PROD",
+      "REACT_APP_UPLOAD_TYPE": "s3",
+      "REACT_APP_USE_ORIGIN_URL": "false",
+      "SKIP_PREFLIGHT_CHECK": "true",
+      "REACT_APP_CUSTOMER": "GIGA",
+      "REACT_APP_CONVERT_HTTP_TO_HTTPS": "false",
+      "REACT_APP_USE_AUTH_COOKIES": "true",
+      "GCS_BUCKET": "sixsense_client_builds"
+    },
+    {
+      "id": "GIGA_PROD",
+      "REACT_APP_UPLOAD_TYPE": "s3",
+      "REACT_APP_USE_ORIGIN_URL": "false",
+      "SKIP_PREFLIGHT_CHECK": "true",
+      "REACT_APP_CUSTOMER": "GIGA_PROD",
+      "REACT_APP_CONVERT_HTTP_TO_HTTPS": "true",
+      "REACT_APP_USE_AUTH_COOKIES": "false",
+      "GCS_BUCKET": "sixsense_client_builds"
+    }
+  ],
+  "KNS": [
+    {
+      "id": "KNS",
+      "REACT_APP_UPLOAD_TYPE": "direct",
+      "REACT_APP_USE_ORIGIN_URL": "true",
+      "SKIP_PREFLIGHT_CHECK": "true",
+      "REACT_APP_CUSTOMER": "KNS",
+      "REACT_APP_CONVERT_HTTP_TO_HTTPS": "true",
+      "REACT_APP_USE_AUTH_COOKIES": "false",
+      "GCS_BUCKET": "sixsense_client_builds"
+    }
+  ],
+  "MICRON": [
+    {
+      "id": "MICRON",
+      "REACT_APP_UPLOAD_TYPE": "direct",
+      "REACT_APP_USE_ORIGIN_URL": "true",
+      "SKIP_PREFLIGHT_CHECK": "true",
+      "REACT_APP_CUSTOMER": "MICRON",
+      "REACT_APP_CONVERT_HTTP_TO_HTTPS": "false",
+      "REACT_APP_USE_AUTH_COOKIES": "true",
+      "GCS_BUCKET": "sixsense_client_builds"
+    }
+  ],
+  "GF7": [
+    {
+      "id": "GF7",
+      "REACT_APP_UPLOAD_TYPE": "direct",
+      "REACT_APP_USE_ORIGIN_URL": "false",
+      "SKIP_PREFLIGHT_CHECK": "true",
+      "REACT_APP_CUSTOMER": "GF7",
+      "REACT_APP_CONVERT_HTTP_TO_HTTPS": "true",
+      "REACT_APP_USE_AUTH_COOKIES": "true",
+      "GCS_BUCKET": "sixsense_client_builds"
+    },
+    {
+      "id": "GF7_PROD",
+      "REACT_APP_UPLOAD_TYPE": "direct",
+      "REACT_APP_USE_ORIGIN_URL": "false",
+      "SKIP_PREFLIGHT_CHECK": "true",
+      "REACT_APP_CUSTOMER": "GF7_PROD",
+      "REACT_APP_CONVERT_HTTP_TO_HTTPS": "true",
+      "REACT_APP_USE_AUTH_COOKIES": "true",
+      "GCS_BUCKET": "sixsense_client_builds"
+    }
+  ],
+  "JCET": [
+    {
+      "id": "JCET",
+      "REACT_APP_UPLOAD_TYPE": "direct",
+      "REACT_APP_USE_ORIGIN_URL": "true",
+      "SKIP_PREFLIGHT_CHECK": "true",
+      "REACT_APP_CUSTOMER": "JCET",
+      "REACT_APP_CONVERT_HTTP_TO_HTTPS": "true",
+      "REACT_APP_USE_AUTH_COOKIES": "false",
+      "GCS_BUCKET": "sixsense_client_builds"
+    }
+  ]
+}

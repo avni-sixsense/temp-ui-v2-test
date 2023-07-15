@@ -1,0 +1,53 @@
+@import 'src/styles/css/const';
+
+.dialogPaper > * {
+  padding: $small;
+  font-size: $med;
+  max-width: 400px;
+  font-weight: $fontWeightMed;
+}
+
+.header {
+  color: #000;
+  font-weight: $fontWeightBold;
+  border-bottom: 1px solid #cee0f8;
+}
+
+.main {
+  display: grid;
+  gap: $small;
+  padding-bottom: $large;
+
+  & > div {
+    display: grid;
+    gap: $xxSmall;
+  }
+
+  .details {
+    border-bottom: 1px solid #e8f2fe;
+    padding-bottom: $small;
+
+    span {
+      margin-left: $xxSmall;
+      color: #000;
+      font-weight: $fontWeightBold;
+    }
+  }
+}
+
+.footer {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  background: #f0f7ff;
+  gap: $xxSmall;
+}
+
+.similarityThreshold {
+  display: flex;
+  align-items: center;
+
+  .similarityThresholdInput {
+    margin-left: $xxSmall;
+  }
+}

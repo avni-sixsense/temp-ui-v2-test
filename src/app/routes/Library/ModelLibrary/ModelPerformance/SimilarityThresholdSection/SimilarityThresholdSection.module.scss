@@ -1,0 +1,44 @@
+@import 'src/styles/css/main';
+
+.container {
+  background: #f0f7ff;
+  border-radius: 4px;
+  padding: 16px 14px 16px 14px;
+  margin: 0px 16px 28px 16px;
+  display: flex;
+  align-items: center;
+  .textSection {
+    width: 50%;
+    .headerContainer {
+      display: flex;
+      align-items: center;
+      .header {
+        font-size: 16px;
+        margin-right: 8px;
+        font-weight: $fontWeightBold;
+      }
+      .percentage {
+        font-size: 20px;
+        font-weight: $fontWeightBold;
+        margin-left: 8px;
+      }
+    }
+    .description {
+      font-size: 14px;
+      margin-top: 10px;
+      color: #3e5680;
+    }
+  }
+  .buttonContainer {
+    width: 50%;
+    text-align: right;
+    justify-content: flex-end;
+    display: flex;
+    .actionBtn {
+      background: #fff;
+      color: #05090e;
+      font-weight: $fontWeightBold;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoadingPage /> should render should work 1`] = `
+<div
+  className="MuiPaper-root makeStyles-paper-1 MuiPaper-elevation0 MuiPaper-rounded"
+>
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-center"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-item"
+    >
+      <img
+        alt=""
+        className="makeStyles-successImg-4"
+        src="group-29.svg"
+      />
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-item"
+    >
+      <h1
+        className="MuiTypography-root makeStyles-title-2 MuiTypography-h1"
+      >
+        Signup Successful
+      </h1>
+      <h1
+        className="MuiTypography-root makeStyles-subTitle-3 MuiTypography-h1"
+      >
+        We are processing your request from our end. Your admin will be sending out the credentials over the email.
+      </h1>
+    </div>
+  </div>
+</div>
+`;

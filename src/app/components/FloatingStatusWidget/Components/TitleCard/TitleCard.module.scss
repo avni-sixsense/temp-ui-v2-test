@@ -1,0 +1,40 @@
+@import 'src/styles/css/colors';
+@import 'src/styles/css/_const';
+@import 'src/styles/css/_main';
+
+.titleCard {
+  display: flex;
+  align-items: center;
+
+  .rotate {
+    @include spin;
+    margin-right: $xxSmall;
+    font-size: $med;
+  }
+
+  .titleIcon {
+    margin-right: $small;
+  }
+
+  .titleText {
+    margin-right: auto;
+
+    span {
+      font-size: $med;
+      font-weight: $fontWeightBold;
+    }
+  }
+
+  .titleActions {
+    @include gridColCenter($med);
+
+    svg {
+      cursor: pointer;
+      color: $gray-7;
+    }
+  }
+
+  .rotate {
+    @include spin(2s);
+  }
+}

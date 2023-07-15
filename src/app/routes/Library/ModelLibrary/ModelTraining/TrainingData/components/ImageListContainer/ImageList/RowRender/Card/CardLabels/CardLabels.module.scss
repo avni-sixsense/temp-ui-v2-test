@@ -1,0 +1,24 @@
+@import 'styles/css/const';
+
+.label {
+  width: auto !important;
+  background-color: #e0ecfd !important;
+  border-radius: 4px;
+  padding: 0px 6px 0px 6px;
+}
+
+.aiLabels {
+  background-color: #d97706 !important;
+  color: #fff !important;
+}
+
+.subLabel {
+  padding: 0 2px;
+  border-radius: $borderRadiusBox;
+  line-height: 1.5;
+  margin-left: $xxxSmall;
+}
+
+.subLabelAiConfidence {
+  background-color: #b45309;
+}

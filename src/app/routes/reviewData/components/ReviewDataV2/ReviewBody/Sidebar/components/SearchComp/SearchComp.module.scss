@@ -1,0 +1,51 @@
+@import 'src/styles/css/main';
+
+.root {
+  .searchBar {
+    background-color: #1c2a42;
+    input {
+      color: #ffffff;
+      font-size: 0.8125rem;
+      ::placeholder {
+        color: #4d6896;
+        opacity: 1;
+      }
+      :-ms-input-placeholder {
+        color: #4d6896;
+      }
+      ::-ms-input-placeholder {
+        color: #4d6896;
+      }
+    }
+    .MuiOutlinedInput-notchedOutline {
+      border: 0.2px solid #31456a;
+      border-radius: 4px;
+    }
+  }
+
+  .listContainer {
+    .listItem {
+      @include flexBetween;
+
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-right: 16px;
+      padding-left: 4px;
+
+      .keyContainer {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .icon {
+    background-color: transparent;
+  }
+
+  .avatar {
+    width: 16px;
+    height: 16px;
+    margin: auto 5px;
+  }
+}

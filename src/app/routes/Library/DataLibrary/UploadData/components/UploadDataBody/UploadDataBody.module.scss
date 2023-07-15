@@ -1,0 +1,37 @@
+@import 'src/styles/css/main';
+@import 'src/styles/css/const';
+
+.folderUploadContainer {
+  margin-top: $xLarge;
+  height: calc(100% + (2 * #{$xLarge}));
+  padding-bottom: 12rem !important;
+  overflow: scroll;
+
+  @include hideScrollbar;
+}
+
+.error {
+  display: grid;
+  gap: $med;
+  border: border($borderColor: $colorError);
+  background-color: #fff1f2;
+  border-radius: $borderRadiusBox;
+  padding: inherit;
+  font-size: $med;
+  color: $colorTertiary;
+
+  .errorInfo {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      font-size: 1rem;
+      margin-right: $xxxSmall;
+      color: #fb7185;
+    }
+  }
+
+  .btn {
+    width: fit-content;
+  }
+}

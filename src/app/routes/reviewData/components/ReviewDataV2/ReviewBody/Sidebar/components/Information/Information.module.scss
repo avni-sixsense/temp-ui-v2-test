@@ -1,0 +1,12 @@
+@import 'styles/css/main';
+@import 'styles/css/const';
+
+.information {
+  display: grid;
+  @include gridTemplateColumns(1fr 1fr);
+  padding: $xxxSmall 0;
+
+  .label {
+    font-weight: $fontWeightNormal;
+  }
+}

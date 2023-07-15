@@ -1,0 +1,14 @@
+@import 'src/styles/css/main';
+
+.container {
+  padding: 16px 10px;
+  background-color: #f0f7ff;
+  border: 1px solid #e0ecfd;
+  border-radius: 4px;
+  .chartContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 10px;
+  }
+}

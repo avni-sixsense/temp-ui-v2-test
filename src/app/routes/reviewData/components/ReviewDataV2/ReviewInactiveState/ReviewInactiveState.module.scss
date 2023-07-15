@@ -1,0 +1,50 @@
+@import 'styles/css/main';
+@import 'styles/css/const';
+
+.modal {
+  display: flex;
+  @include flexCenter;
+
+  .paper {
+    background-color: #0e1623;
+    width: 18.125rem;
+
+    p {
+      color: #ffffff !important;
+    }
+
+    & > div {
+      padding: $med $small;
+    }
+
+    .headerContainer {
+      border-bottom: border($borderColor: $bgColorSecondary);
+      @include flexBetween;
+
+      .header,
+      .closeIcon {
+        color: $colorDenary;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        padding: 0;
+      }
+    }
+
+    .modalBody {
+      display: grid;
+      gap: $med;
+
+      .modalActionBtns {
+        display: flex;
+        gap: 8px;
+        width: fit-content;
+        margin-top: $xSmall;
+      }
+    }
+
+    .modalText {
+      font-size: 0.8125rem;
+      color: #4d6896;
+    }
+  }
+}

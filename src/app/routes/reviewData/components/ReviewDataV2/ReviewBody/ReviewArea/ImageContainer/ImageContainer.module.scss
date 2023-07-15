@@ -1,0 +1,10 @@
+@import 'styles/css/main';
+
+.imageContainer {
+  display: grid;
+  @include gridTemplateColumns(1fr);
+
+  &.showAnnotator {
+    @include gridTemplateColumns(230px 1fr);
+  }
+}

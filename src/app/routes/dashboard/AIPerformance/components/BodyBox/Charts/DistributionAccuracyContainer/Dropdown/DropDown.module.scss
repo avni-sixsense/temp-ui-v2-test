@@ -1,0 +1,29 @@
+@import 'styles/css/main';
+
+.root {
+  .dropDown {
+    border: 1px solid #e0ecfd;
+    cursor: pointer;
+    svg {
+      color: #5e7baa;
+    }
+  }
+
+  .dropDownText {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #3e5680;
+  }
+
+  .popper {
+    z-index: 99;
+  }
+
+  .dropDownPaper {
+    min-width: 150;
+  }
+
+  .options {
+    cursor: pointer;
+  }
+}

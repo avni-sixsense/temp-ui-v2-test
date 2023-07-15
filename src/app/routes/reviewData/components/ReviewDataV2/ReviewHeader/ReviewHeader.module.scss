@@ -1,0 +1,21 @@
+@import 'styles/css/main';
+@import 'styles/css/const';
+
+.header {
+  display: flex;
+  @include flexBetween;
+  @include fontInherit;
+  border-bottom: border($borderColor: $borderColorPrimary);
+
+  .label {
+    font-size: $large;
+    @include gridColCenter($xxxSmall);
+  }
+
+  .valueContainer {
+    @include fontInherit($small);
+    background-color: $bgColorPrimary;
+    padding: 0.125rem 0.375rem;
+    border-radius: $borderRadiusBox;
+  }
+}

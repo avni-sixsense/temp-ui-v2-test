@@ -1,0 +1,12 @@
+@import 'src/styles/css/main';
+@import 'src/styles/css/const';
+
+.sideDrawerBody {
+  @include fontStyles($small);
+  overflow: hidden;
+  margin-bottom: $xLarge;
+
+  & > div {
+    padding: $small $large;
+  }
+}

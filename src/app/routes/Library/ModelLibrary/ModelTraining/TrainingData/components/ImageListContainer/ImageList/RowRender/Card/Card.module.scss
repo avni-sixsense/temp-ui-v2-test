@@ -1,0 +1,52 @@
+@import 'styles/css/main';
+@import 'styles/css/const';
+
+.cardContainer {
+  padding: 8px;
+  
+  .card {
+    display: grid;
+    @include gridTemplateRows(calc(100% - 35px) 35px);
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+
+    border: border(1px, solid, #cee0f8);
+    border-radius: 4px;
+
+    .cardInfo {
+      background: #ffffff;
+      height: 35px;
+      padding: 8px 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+
+      .innerContainer{
+        display: flex;
+        gap: 8px;
+
+        .index{
+          background-color: #e0ecfd;
+          border-radius: 4px;
+          padding: 1px 0.5rem;
+        }
+      }
+      & > div {
+        padding: 1px $xxSmall;
+        border-radius: $borderRadiusBox;
+      }
+    }
+  }
+
+  &.selected {
+    padding: 6px;
+    color: $colorSeptenary;
+
+    .card {
+      border: border(2px, solid, $colorQuinary);
+      border-radius: 4px;
+    }
+  }
+}

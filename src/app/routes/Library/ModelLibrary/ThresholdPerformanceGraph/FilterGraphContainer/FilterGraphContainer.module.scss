@@ -1,0 +1,55 @@
+@import 'src/styles/css/main';
+@import 'src/styles/css/const';
+
+.container {
+  background-color: #fff;
+  padding: 16px 20px 28px 20px;
+
+  .header {
+    color: #3e5680;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+
+    .headerText {
+      margin-right: 8px;
+    }
+  }
+
+  .distributionSet {
+    display: flex;
+    font-size: 14px;
+    padding: 12px 0px 12px 0px;
+
+    .actionBtn {
+      border: 1px solid #fafafa;
+      color: #05090e;
+      font-weight: $fontWeightBold;
+      font-size: 16px;
+    }
+
+    .filterItems {
+      color: #090f17;
+      font-size: 12px;
+      border-radius: 12px;
+      padding: 4px 8px 4px 8px;
+      border: 1px solid #e8f2fe;
+      margin: 0px 12px 0px 0px;
+      display: flex;
+      align-items: center;
+    }
+    .btnContainer {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .filterValue {
+      font-weight: $fontWeightBold;
+    }
+  }
+  .outDistributionStyle {
+    border-top: 2px solid #e8f2fe;
+  }
+}

@@ -1,0 +1,11 @@
+@import 'src/styles/css/main';
+
+.root {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    background-color: transparent;
+    padding: 8px;
+  }
+}

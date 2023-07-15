@@ -1,0 +1,36 @@
+@import 'src/styles/css/main';
+
+.container {
+  display: grid;
+  @include gridSpaceBetween;
+  padding: $small $med;
+  border-bottom: border($borderColor: $colorSenary);
+  @include fontInherit;
+
+  h1 {
+    @include headerStyles;
+  }
+
+  .iconContainer {
+    height: 24px;
+    width: 24px;
+    border: border(0.8px, solid, $colorSenary);
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px rgba(14, 22, 35, 0.05);
+    color: #95b2dd;
+    cursor: pointer;
+
+    display: flex;
+    @include flexCenter;
+
+    .icon {
+      font-size: 1.1rem;
+      stroke: currentColor;
+      stroke-width: 1.5;
+    }
+
+    &[disabled] {
+      @include disabled;
+    }
+  }
+}

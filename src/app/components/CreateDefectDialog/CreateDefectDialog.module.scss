@@ -1,0 +1,15 @@
+@import 'src/styles/css/main';
+@import 'src/styles/css/const';
+
+.container {
+  background-color: #0e1623;
+  color: #fff;
+  font-weight: $fontWeightBold;
+  font-size: $med;
+
+  width: 448px;
+
+  & > div {
+    padding: $small;
+  }
+}

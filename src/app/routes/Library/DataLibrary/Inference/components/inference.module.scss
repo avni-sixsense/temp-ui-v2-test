@@ -1,0 +1,21 @@
+@import 'src/styles/css/main';
+
+.inferenceValueContainer {
+  display: grid;
+  gap: 9px;
+  .valueContainer {
+    display: grid;
+    @include gridTemplateColumns(minmax(auto, 140px) minmax(auto, 100px));
+    gap: 12px;
+    div:first-child {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #31456a;
+    }
+    div:last-child {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #05090e;
+    }
+  }
+}

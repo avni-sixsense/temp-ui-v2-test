@@ -1,0 +1,30 @@
+@import 'styles/css/main';
+@import 'styles/css/const';
+
+.waferInfoContainer {
+  @include gridColCenter($xxSmall);
+}
+
+.navigateWaferBook {
+  font-size: $med !important;
+}
+
+.values {
+  margin: 0 $xxxSmall;
+  background-color: $bgColorSecondary;
+  padding: 2px $xxxSmall;
+  border-radius: $borderRadiusBox;
+  font-size: $small;
+}
+
+.icon {
+  color: #82a0ce;
+  cursor: pointer;
+  padding: 0px;
+
+  &[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+    background-color: transparent !important;
+  }
+}

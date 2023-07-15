@@ -1,0 +1,112 @@
+@import 'src/styles/css/const';
+@import 'src/styles/css/main';
+
+.popperDisablePortal {
+  position: static;
+}
+
+.paper {
+  background-color: unset;
+  box-shadow: unset;
+  margin-bottom: unset;
+  margin-top: 6px;
+}
+
+.listbox {
+  padding: unset;
+  @include customSrollbar;
+}
+
+.autoCompleteText {
+  height: 30px;
+  font-size: $med;
+  color: $colorSeptenary;
+}
+
+.darkAutoCompleteText {
+  color: $colorDenary;
+}
+
+.option {
+  &[data-focus='true'] {
+    background-color: #f0f7ff;
+  }
+
+  &[aria-selected='true'] {
+    background-color: $colorNonary;
+
+    svg {
+      color: #3b82f6;
+    }
+  }
+
+  background-color: $colorDenary;
+  padding: 0 $xxxSmall;
+  max-width: 98%;
+  @extend .autoCompleteText;
+
+  &.darkOption {
+    background-color: $borderColorPrimary;
+    @extend .darkAutoCompleteText;
+
+    &[data-focus='true'] {
+      background-color: $bgColorSecondary;
+    }
+
+    &[aria-selected='true'] {
+      background-color: #0e1623;
+    }
+  }
+}
+
+.loading {
+  padding: $xxSmall $xxxSmall;
+  @extend .autoCompleteText;
+
+  &.darkLoading {
+    @extend .darkAutoCompleteText;
+  }
+}
+
+.input {
+  color: #010202;
+  border-radius: $borderRadius;
+  background-color: $colorNonary;
+
+  &:hover,
+  &:focus-within {
+    fieldset {
+      box-shadow: 0px 0px 10px rgb(37 99 235 / 10%), 0px 0px 1px #2563eb;
+      border: border($borderColor: $colorQuinary) !important;
+    }
+  }
+
+  &.darkInput {
+    background-color: $bgColorSecondary;
+  }
+}
+
+.darkInputRoot {
+  color: $colorDenary;
+}
+
+.tag {
+  background-color: #c0deff;
+
+  &.darkTag {
+    background-color: $bgColorPrimary;
+    @extend .darkAutoCompleteText;
+
+    svg {
+      color: $colorPrimary;
+    }
+  }
+}
+
+.darkThemeInputIcons * {
+  color: $colorPrimary;
+}
+
+.endAdornment > :last-child {
+  display: none;
+}

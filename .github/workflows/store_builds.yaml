@@ -1,0 +1,77 @@
+name: Build & Push to Google Cloud Storage
+
+on:
+  push:
+    branches: [KNS, GF7, MICRON, GIGA_model_ai_performance_changes, JCET]
+
+jobs:
+  read-json-config:
+    runs-on: ubuntu-latest
+    outputs:
+        matrix: ${{ steps.set-matrix-json.outputs.matrix }}
+        branch: ${{ steps.set-current-branch.outputs.branch }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - id: set-matrix-json
+        run: |-
+            content=$(cat ./.github/json/store_builds.json)
+            content="${content//'%'/'%25'}"
+            content="${content//$'\n'/'%0A'}"
+            content="${content//$'\r'/'%0D'}"
+            echo "::set-output name=matrix::$content"
+
+      - id: set-current-branch
+        run: echo "::set-output name=branch::${GITHUB_REF#refs/heads/}"
+
+  publish:
+    needs: read-json-config
+    strategy:
+      matrix:
+        env: ${{ fromJSON(needs.read-json-config.outputs.matrix)[needs.read-json-config.outputs.branch] }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup node engine
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: Setup SSH Key
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_GH_ACTIONS }}
+
+      - name: Read env from JSON
+        run: |-
+          echo REACT_APP_UPLOAD_TYPE="${{ matrix.env.REACT_APP_UPLOAD_TYPE }}" >> $GITHUB_ENV
+          echo REACT_APP_USE_ORIGIN_URL="${{ matrix.env.REACT_APP_USE_ORIGIN_URL }}" >> $GITHUB_ENV
+          echo SKIP_PREFLIGHT_CHECK="${{ matrix.env.SKIP_PREFLIGHT_CHECK }}" >> $GITHUB_ENV
+          echo CI="${{ matrix.env.CI }}" >> $GITHUB_ENV
+          echo REACT_APP_CUSTOMER="${{ matrix.env.REACT_APP_CUSTOMER }}" >> $GITHUB_ENV
+          echo REACT_APP_CONVERT_HTTP_TO_HTTPS="${{ matrix.env.REACT_APP_CONVERT_HTTP_TO_HTTPS }}" >> $GITHUB_ENV
+          echo REACT_APP_USE_AUTH_COOKIES="${{ matrix.env.REACT_APP_USE_AUTH_COOKIES }}" >> $GITHUB_ENV
+
+      - name: Creating a fresh build
+        run: yarn install && yarn build
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v0
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+          export_default_credentials: true
+
+      - name: Get current time
+        id: time
+        run: echo "::set-output name=time::$(date +'%T')"
+
+      - name: Zip the build
+        run: zip -r ${{ matrix.env.id }}-${{ steps.time.outputs.time }}.zip build
+
+      - name: Push the build to GCloud Storage
+        run: gcloud storage cp ${{ matrix.env.id }}-${{ steps.time.outputs.time }}.zip gs://${{ matrix.env.GCS_BUCKET }}/${{ matrix.env.id }}/$(date +'%Y-%m-%d')/
+
+      - name: Clean the zipped build
+        run: rm -rf ${{ matrix.env.id }}-${{ steps.time.outputs.time }}.zip

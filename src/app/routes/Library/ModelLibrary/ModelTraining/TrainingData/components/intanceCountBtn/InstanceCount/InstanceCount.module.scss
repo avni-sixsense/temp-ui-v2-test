@@ -1,0 +1,7 @@
+@import 'styles/css/main';
+
+.imageCount {
+  font-size: 0.875rem;
+  font-weight: 500;
+  @include fontColors(#31456a);
+}

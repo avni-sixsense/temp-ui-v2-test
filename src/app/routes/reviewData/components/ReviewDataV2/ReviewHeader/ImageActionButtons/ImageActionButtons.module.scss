@@ -1,0 +1,9 @@
+@import 'styles/css/main';
+
+.imgActionBtnsContainer {
+  @include gridColCenter;
+
+  & > button {
+    @include bgTransparent;
+  }
+}

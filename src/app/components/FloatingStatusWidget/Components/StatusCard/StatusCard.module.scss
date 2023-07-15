@@ -1,0 +1,41 @@
+@import 'src/styles/css/_const';
+@import 'src/styles/css/colors';
+@import 'src/styles/css/_main';
+
+.statusCard {
+  @include flexBetween;
+  padding: 0.5rem 0;
+
+  .error {
+    @include gridColCenter($med);
+  }
+
+  .name {
+    max-width: 70%;
+  }
+
+  span {
+    font-size: 13px;
+    font-weight: $fontWeightMed;
+  }
+
+  .rotate {
+    @include spin(2s);
+  }
+
+  svg {
+    color: $gray-7;
+  }
+
+  .retryButton {
+    cursor: pointer;
+  }
+
+  .errorIcon {
+    color: $colorError;
+  }
+
+  .checkIcon {
+    color: $shamrock-80;
+  }
+}

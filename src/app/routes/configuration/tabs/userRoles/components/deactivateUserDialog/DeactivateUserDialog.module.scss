@@ -1,0 +1,31 @@
+@import 'styles/css/main';
+@import 'styles/css/const';
+
+.root {
+  color: $colorQuaternary;
+  font-size: $med;
+  padding: $large $xSmall;
+  width: 290px;
+
+  .actionBtn {
+    display: flex;
+    gap: 8px;
+  }
+
+  .title {
+    font-weight: $fontWeightBold;
+    font-size: $med;
+    padding-bottom: $xSmall;
+    border-bottom: border($borderColor: $colorSenary);
+  }
+
+  .content {
+    font-size: $small;
+    padding-top: $xSmall;
+    padding-bottom: $large;
+
+    span {
+      font-weight: $fontWeightBold;
+    }
+  }
+}

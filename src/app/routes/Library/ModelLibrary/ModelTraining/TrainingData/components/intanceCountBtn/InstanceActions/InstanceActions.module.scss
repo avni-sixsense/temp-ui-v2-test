@@ -1,0 +1,23 @@
+@import 'styles/css/main';
+
+.insetenceContainer {
+  background-color: #e8f2fe;
+  border-radius: 3px;
+
+  font-size: 0.625rem;
+  font-weight: 500;
+  color: #3e5680;
+}
+
+.insetenceText {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #31456a;
+  margin: 0px 8px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

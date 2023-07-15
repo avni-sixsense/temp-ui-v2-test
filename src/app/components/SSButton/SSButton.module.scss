@@ -1,0 +1,15 @@
+@import 'src/styles/css/main';
+
+.btn {
+  background-color: $colorQuinary;
+  @include fontInherit(15px, $color: #fff !important);
+  padding: $xxxSmall $med;
+
+  &:hover {
+    background-color: rgba($colorQuinary, 0.9);
+  }
+}
+
+.btnDisabled {
+  @include disabled;
+}

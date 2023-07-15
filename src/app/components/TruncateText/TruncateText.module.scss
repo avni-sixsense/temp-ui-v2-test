@@ -1,0 +1,24 @@
+@import 'src/styles/css/main';
+
+.truncateText {
+  width: 100%;
+  overflow: hidden;
+  @include hideScrollbar;
+  background-color: inherit;
+  white-space: nowrap;
+
+  display: flex;
+
+  .label2 {
+    position: relative;
+    background-color: inherit;
+  }
+
+  .overflow {
+    padding-right: 8px;
+
+    &::before {
+      content: '...';
+    }
+  }
+}

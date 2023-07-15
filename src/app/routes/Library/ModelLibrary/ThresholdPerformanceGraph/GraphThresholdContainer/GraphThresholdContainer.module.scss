@@ -1,0 +1,31 @@
+@import 'src/styles/css/main';
+@import 'src/styles/css/const';
+
+.container {
+  padding: 0px 20px 0px 20px;
+  background: #fff;
+
+  .innerContainer {
+    border-radius: 8px;
+    border: 2px solid #cee0f8;
+    color: #3e5680;
+    font-size: 16px;
+
+    .percent {
+      color: #162236;
+      font-weight: $fontWeightBold;
+    }
+    .similaritySection {
+      display: flex;
+      margin-bottom: 38px;
+      padding: 16px 0px 0px 16px;
+
+      .button {
+        margin-left: 8px;
+      }
+      .text {
+        margin-right: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import 'src/styles/css/main';
+
+.root {
+  display: grid;
+  gap: $small;
+}
+
+.textArea {
+  border-radius: 8px;
+
+  background-color: #05090e;
+
+  textarea {
+    color: #ffffff;
+
+    ::placeholder {
+      color: #ffffff;
+      opacity: 1;
+      font-weight: 400;
+      font-size: 13px;
+    }
+  }
+}
+.saveBtn {
+  width: fit-content;
+}

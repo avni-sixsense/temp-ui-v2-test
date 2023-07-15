@@ -1,0 +1,15 @@
+@import 'styles/css/main';
+
+.review {
+  display: grid;
+  @include gridTemplateRows(43px calc(100vh - 43px));
+  max-height: 100vh;
+  background-color: $colorQuaternary;
+  color: #fff;
+  font-weight: $fontWeightBold;
+  box-sizing: border-box;
+
+  & > header {
+    padding: $xSmall $small;
+  }
+}

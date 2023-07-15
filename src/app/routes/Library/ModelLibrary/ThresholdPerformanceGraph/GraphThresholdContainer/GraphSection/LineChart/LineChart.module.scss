@@ -1,0 +1,10 @@
+.chart {
+  position: relative;
+}
+
+.yaxis {
+  position: absolute;
+  font-size: 12px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+}

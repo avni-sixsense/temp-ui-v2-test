@@ -1,0 +1,25 @@
+@import 'styles/css/main';
+
+.dialogPaper {
+  background-color: #0e1623;
+  border: 1px solid #31456a;
+  border-radius: 4px;
+  padding: 10px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sliderContainer {
+  display: grid;
+  align-items: center;
+  @include gridTemplateColumns(2fr 3fr);
+
+  p {
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #ffffff;
+  }
+}

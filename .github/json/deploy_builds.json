@@ -1,0 +1,52 @@
+{
+  "new_ai_performance_design": {
+    "GCS_BUCKET": "sixsense-staging1-ui",
+    "REACT_APP_UPLOAD_TYPE": "s3",
+    "REACT_APP_USE_ORIGIN_URL": "true",
+    "SKIP_PREFLIGHT_CHECK": "true",
+    "CI": "false",
+    "REACT_APP_CUSTOMER": "sixsense",
+    "REACT_APP_CONVERT_HTTP_TO_HTTPS": "true",
+    "REACT_APP_LOG_ROCKET_ID": "4hizk0/staging1-janja"
+  },
+  "staging2": {
+    "GCS_BUCKET": "sixsense-staging2-ui",
+    "REACT_APP_UPLOAD_TYPE": "s3",
+    "REACT_APP_USE_ORIGIN_URL": "true",
+    "SKIP_PREFLIGHT_CHECK": "true",
+    "CI": "false",
+    "REACT_APP_CUSTOMER": "sixsense",
+    "REACT_APP_CONVERT_HTTP_TO_HTTPS": "true",
+    "REACT_APP_LOG_ROCKET_ID": "4hizk0/staging2-6pfzc"
+  },
+  "staging1": {
+    "GCS_BUCKET": "sixsense-api-v2-staging1-static-files",
+    "REACT_APP_UPLOAD_TYPE": "s3",
+    "REACT_APP_USE_ORIGIN_URL": "true",
+    "SKIP_PREFLIGHT_CHECK": "true",
+    "CI": "false",
+    "REACT_APP_CUSTOMER": "sixsense",
+    "REACT_APP_CONVERT_HTTP_TO_HTTPS": "true",
+    "REACT_APP_LOG_ROCKET_ID": "null"
+  },
+  "master": {
+    "GCS_BUCKET": "sixsense-api-v2-prod-static-files",
+    "REACT_APP_UPLOAD_TYPE": "s3",
+    "REACT_APP_USE_ORIGIN_URL": "true",
+    "SKIP_PREFLIGHT_CHECK": "true",
+    "CI": "false",
+    "REACT_APP_CUSTOMER": "sixsense",
+    "REACT_APP_CONVERT_HTTP_TO_HTTPS": "true",
+    "REACT_APP_LOG_ROCKET_ID": "null"
+  },
+  "staging": {
+    "GCS_BUCKET": "sixsense-api-v2-staging-static-files",
+    "REACT_APP_UPLOAD_TYPE": "s3",
+    "REACT_APP_USE_ORIGIN_URL": "true",
+    "SKIP_PREFLIGHT_CHECK": "true",
+    "CI": "false",
+    "REACT_APP_CUSTOMER": "sixsense",
+    "REACT_APP_CONVERT_HTTP_TO_HTTPS": "true",
+    "REACT_APP_LOG_ROCKET_ID": "null"
+  }
+}

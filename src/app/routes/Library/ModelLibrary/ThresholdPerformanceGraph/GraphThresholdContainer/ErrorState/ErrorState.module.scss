@@ -1,0 +1,16 @@
+.errorStateContainer {
+  background-color: rgba(0, 0, 0, 0.06);
+  height: 400px;
+  position: relative;
+  .innerContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .buttonContainer {
+      display: flex;
+      justify-content: center;
+      padding-top: 14px;
+    }
+  }
+}

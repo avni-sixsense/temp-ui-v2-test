@@ -1,0 +1,16 @@
+@import 'styles/css/main';
+
+.reviewBody {
+  display: grid;
+  @include gridTemplateColumns(1fr 400px);
+  padding: 0;
+  overflow: hidden;
+
+  .mainArea {
+    user-select: none;
+
+    & > div {
+      margin: $xSmall $small;
+    }
+  }
+}

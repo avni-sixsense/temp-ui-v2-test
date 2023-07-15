@@ -1,0 +1,10 @@
+export const SET_FILTER_QUERY = 'SET_FILTER_QUERY';
+export const RESET_FILTER_QUERY = 'RESET_FILTER_QUERY';
+export const MODEL_FILTER = 'model';
+export const FOLDER_FILTER = 'folder';
+export const DEFECT_FILTER = 'defect';
+export const USECASE_FILTER = 'usecase';
+export const GROUND_TRUTH_FILTER = 'groundTruth';
+export const GT_MODEL_FILTER = 'gtModel';
+export const WAFER_MAP_FILTER = 'wafermap';
+export const AI_OUTPUT_FILTER = 'aiOutput';
